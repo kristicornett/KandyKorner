@@ -7,6 +7,8 @@ import { LocationDetails } from "../tickets/LocationDetails"
 import { CandyForm } from "../tickets/CandyOrderForm"
 import { AddEmployeeForm } from "../tickets/AddEmployee"
 import { AddUserForm } from "../tickets/AddUserForm"
+import { CustomerDetails } from "../customers/CustomerDetails"
+import { CustomerList } from "../customers/CustomerList"
 
 
 export const ProductViews = () => {
@@ -28,7 +30,9 @@ export const ProductViews = () => {
                 <Route path="locations/:locationId" element={ <LocationDetails /> } />
                 <Route path="newEmployees" element={ <AddEmployeeForm /> } />
                 <Route path="newUsers" element={ <AddUserForm /> } />
-				
+                <Route path="customers/:customerId" element={ <CustomerDetails /> } />
+				<Route path="customers" element={ <CustomerList />} />
+
             </Route>
         </Routes>
     )
