@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { CustomerLoyaltyNumber } from './Customer'
 
 
 export const CustomerDetails = () => {
@@ -23,9 +25,9 @@ export const CustomerDetails = () => {
     
 
     return <section className="customer">
-        <header className="customer__header">{customer?.user?.name}</header>
+        <header customer={customer} className="customer__header">{customer?.user?.name}</header>
         <div>Email: {customer?.user?.email}</div>
-        <div>Loyalty Number: {customer.loyaltyNumber}</div>
+        <div>Loyalty Number: {CustomerLoyaltyNumber()} {customer.loyaltyNumber} /></div>
         
     </section>
 }

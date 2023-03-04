@@ -8,3 +8,11 @@ export const Customer = ({ customer }) => {
         
     </section>
 }
+
+export const CustomerLoyaltyNumber = ({ customer }) => {
+    return <section className="customerLoyalty" key={`customer--${customer.id}`}>
+        <div>
+            Loyalty Number:<Link to={`/customers/${customer.id}`}>{customer.loyaltyNumber}</Link>
+        </div>
+    </section>
+}
