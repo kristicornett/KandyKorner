@@ -15,6 +15,7 @@ export const CustomerList = () => {
         },
         []
     )
+    
 
     return <article className="customer">
         {

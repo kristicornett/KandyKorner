@@ -6,7 +6,9 @@ import { CustomerLoyaltyNumber } from './Customer'
 
 export const CustomerDetails = () => {
     const {customerId} = useParams()
-    const [customer, updateCustomers] = useState({})
+    const [customer, updateCustomer] = useState({})
+    const [loyaltyNumber, updateLoyalNumber] = useState('')
+
    
 
     useEffect(
@@ -15,19 +17,23 @@ export const CustomerDetails = () => {
             .then(response => response.json())
             .then((data) => {
                 const singleCustomer = data[0]
-                updateCustomers(singleCustomer)
+                updateCustomer(singleCustomer)
+                updateLoyalNumber(singleCustomer.loyaltyNumber)
             })
         },
         [customerId]
     )
 
-    
-    
 
     return <section className="customer">
         <header customer={customer} className="customer__header">{customer?.user?.name}</header>
         <div>Email: {customer?.user?.email}</div>
-        <div>Loyalty Number: {CustomerLoyaltyNumber()} {customer.loyaltyNumber} /></div>
+        <div>Loyalty Number: <input type="text" 
+                                value={loyaltyNumber}
+                                
+                                ></input>
+                <input type="button" onClick={}>Update</input>                
+        </div>
         
     </section>
 }

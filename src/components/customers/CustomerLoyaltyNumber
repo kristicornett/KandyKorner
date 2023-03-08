@@ -1,0 +1,12 @@
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+export const CustomerLoyaltyNumber = ({loyaltyNumber, updateLoyaltyNumber}) => {
+    //const [loyaltyNumber, setLoyaltyNumber] = useState(loyaltyNumber)
+    
+    const saveLoyaltyNumber = (event) => {
+
+    }
+
+}

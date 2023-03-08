@@ -3,10 +3,10 @@ import { CandySearch } from './CandySearch'
 import { CandyList } from './CandyList'
 
 export const CandyContainer = () => {
-    const [searchTerms, setSearchTerms] = useState('')
+    const [searchValue, setSearchTerms] = useState('')
 
     return <>
         <CandySearch setterFunction={setSearchTerms} />
-        <CandyList searchTermState={searchTerms} />
+        <CandyList searchTermState={searchValue} />
     </>
 }
