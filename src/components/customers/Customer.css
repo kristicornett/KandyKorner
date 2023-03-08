@@ -1,5 +1,6 @@
 .customers {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column;
 }
 
@@ -9,4 +10,19 @@
     border-radius: 1.5rem;
     padding: 0.7rem;
     margin: 0.5rem;
+=======
+    flex-direction: row;
+}
+
+.customer {
+    width: 50%;
+    height: 50px;
+    background-color: rgb(175, 190, 246);
+    border: 1px dotted rgb(104, 135, 238);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    margin: 0.5rem;
+
+>>>>>>> 1aeb1625a73499e2defcdb51fb827fb52c1cda42
 }
